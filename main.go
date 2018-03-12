@@ -11,8 +11,8 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/otoolep/hraftd/http"
-	"github.com/otoolep/hraftd/store"
+	"github.com/dustin-decker/hraftd/http"
+	"github.com/dustin-decker/hraftd/store"
 )
 
 // Command line defaults
