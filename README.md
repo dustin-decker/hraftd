@@ -1,6 +1,6 @@
 _For background on this project check out this [blog post](http://www.philipotoole.com/building-a-distributed-key-value-store-using-raft/)._
 
-hraftd [![Build Status](https://travis-ci.org/dustin-decker/hraftd.svg?branch=master)](https://travis-ci.org/dustin-decker/hraftd) [![appveyor](https://ci.appveyor.com/api/projects/status/github/otoolep/hraftd?branch=master&svg=true)](https://ci.appveyor.com/project/otoolep/hraftd) [![GoDoc](https://godoc.org/github.com/otoolep/hraftd?status.png)](https://godoc.org/github.com/otoolep/hraftd) [![Go Report Card](https://goreportcard.com/badge/github.com/otoolep/hraftd)](https://goreportcard.com/report/github.com/otoolep/hraftd)
+hraftd [![Build Status](https://travis-ci.org/dustin-decker/hraftd.svg?branch=master)](https://travis-ci.org/dustin-decker/hraftd) [![GoDoc](https://godoc.org/github.com/dustin-decker/hraftd?status.png)](https://godoc.org/github.com/dustin-decker/hraftd) [![Go Report Card](https://goreportcard.com/badge/github.com/dustin-decker/hraftd)](https://goreportcard.com/report/github.com/otoolep/hraftd)
 ======
 
 hraftd is a reference example use of the [Hashicorp Raft implementation v1.0](https://github.com/hashicorp/raft). [Raft](https://raft.github.io/) is a _distributed consensus protocol_, meaning its purpose is to ensure that a set of nodes -- a cluster -- agree on the state of some arbitrary state machine, even when nodes are vulnerable to failure and network partitions. Distributed consensus is a fundamental concept when it comes to building fault-tolerant systems.
@@ -42,7 +42,7 @@ curl -XGET localhost:11000/key/user1
 ```
 
 ### Bring up a cluster
-_A walkthrough of setting up a more realistic cluster is [here](https://github.com/otoolep/hraftd/blob/master/CLUSTERING.md)._
+_A walkthrough of setting up a more realistic cluster is [here](https://github.com/dustin-decker/hraftd/blob/master/CLUSTERING.md)._
 
 Let's bring up 2 more nodes, so we have a 3-node cluster. That way we can tolerate the failure of 1 node:
 ```bash
