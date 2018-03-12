@@ -48,7 +48,7 @@ func (s *Service) Start() error {
 		Handler: s,
 	}
 
-	ln, err := net.Listen("tcp", s.addr)
+	ln, err := net.Listen("tcp", ":11000")
 	if err != nil {
 		return err
 	}

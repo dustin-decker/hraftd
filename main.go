@@ -54,9 +54,10 @@ func main() {
 	}
 	os.MkdirAll(raftDir, 0700)
 
+	// time.Sleep(time.Second * 120)
 	s := store.New()
 	s.RaftDir = raftDir
-	s.RaftBind = raftAddr
+	s.RaftBind = DefaultRaftAddr
 	if err := s.Open(joinAddr == "", nodeID); err != nil {
 		log.Fatalf("failed to open store: %s", err.Error())
 	}

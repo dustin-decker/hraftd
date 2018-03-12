@@ -10,8 +10,10 @@ services:
       - hraftd
     image: hraftd
     command: -id node0 -haddr hraftd0:11000 -raddr hraftd0:12000 ~/node0
+    ports:
+      - "11000"
+      - "12000"
     deploy:
-      endpoint_mode: dnsrr
       mode: replicated
       replicas: 1
       restart_policy:
@@ -23,10 +25,12 @@ services:
       - hraftd
     image: hraftd
     command: -id node1 -join hraftd0:11000 -haddr hraftd1:11000 -raddr hraftd1:12000 ~/node1
+    ports:
+      - "11000"
+      - "12000"
     deploy:
-      endpoint_mode: dnsrr
       mode: replicated
-      replicas: 2
+      replicas: 1
       restart_policy:
         condition: any
         delay: 10s
@@ -36,8 +40,10 @@ services:
       - hraftd
     image: hraftd
     command: -id node2 -join hraftd1:11000 -haddr hraftd2:11000 -raddr hraftd2:12000 ~/node2
+    ports:
+      - "11000"
+      - "12000"
     deploy:
-      endpoint_mode: dnsrr
       mode: replicated
       replicas: 1
       restart_policy:
