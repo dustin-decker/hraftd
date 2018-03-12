@@ -33,10 +33,6 @@
   branch = "master"
   name = "github.com/hashicorp/raft-boltdb"
 
-[[constraint]]
-  branch = "master"
-  name = "github.com/otoolep/hraftd"
-
 [prune]
   go-tests = true
   unused-packages = true

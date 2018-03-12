@@ -45,15 +45,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/otoolep/hraftd"
-  packages = [
-    "http",
-    "store"
-  ]
-  revision = "483b663270c1628ac61b782f2b9e3e9acca6ce2a"
-
-[[projects]]
-  branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
   revision = "7dca6fe1f43775aa6d1334576870ff63f978f539"
@@ -61,6 +52,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ad3f7163926009b36a73384e0ccd34ad6b70aec1b325712abf600a27edd2c43b"
+  inputs-digest = "eae3d733fe8e73d65ebf0a14ef84014180ce38da4abb2078eb1535f13f6f6423"
   solver-name = "gps-cdcl"
   solver-version = 1
