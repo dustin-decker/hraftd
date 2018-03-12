@@ -1,0 +1,5 @@
+FROM centos
+COPY hraftd /
+EXPOSE 11000
+EXPOSE 12000
+ENTRYPOINT [ "/hraftd" ]
