@@ -8,7 +8,7 @@ RUN go get -u github.com/golang/dep/cmd/dep
 COPY ./ ${PROJECT_PATH}
 RUN export PATH=$PATH:`go env GOHOSTOS`-`go env GOHOSTARCH` \
     && dep ensure \
-    && CGO_ENABLED=0 GOOS=`go env GOHOSTOS` GOARCH=`go env GOHOSTARCH` go build -o deflek \
+    && CGO_ENABLED=0 GOOS=`go env GOHOSTOS` GOARCH=`go env GOHOSTARCH` go build -o hraftd \
     && go test $(go list ./... | grep -v /vendor/)
 
 # Production image*
